@@ -16,8 +16,8 @@ Alguns dels mètodes més coneguts del Càlcul Numèric que es cobreixen en aque
 > - **img/**	- Conté totes les imatges que s'han fet (amb gnuplot) per a la memòria
 > - **io/**	- Conté tots els arxius que han servit com a input i output dels programes
 > - **lib/**	- Conté totes les llibreries creades
->    *		**bin/**	- Conté els object files (si no s'esborren)
->    *		**hdr/**	- Conté els headers
+>    *	 **bin/**	- Conté els object files (si no s'esborren)
+>    *	 **hdr/**	- Conté els headers
 >    *   **src/**	- Conté els codis
 > - **util/**	- Conté les utilitats creades
 >    *   **bin/**	- Conté els executables (si no s'esborren)
