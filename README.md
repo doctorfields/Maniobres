@@ -1,28 +1,26 @@
-# SolarSystem
-_Simple and visual model of Solar System with VPython_
+# Càlcul de maniobres d'una nau espacial
+_Conjunt de rutines per al càlcul de maniobres d'una nau especial en el problema del tres cossos_
 
 ---------------
 
-## Requirements
-> - Python 2.7 (https://www.python.org/)
-> - VPython (http://vpython.org/index.html)
-> - wxPython (https://wxpython.org/)
+Aquest respositori consta de tot el conjunt de rutines elaborades per la pràctica de l'assignatura de 'Càlcul Numèric'. L'objectiu final d'aquesta pràctica és el càlcul de les dues maniobres necessàries per portar una nau sotmesa al problema de tres cossos des d'un punt A -de l'espai de sis dimensions 'espai + velocitat'- a un punt B -del mateix espai-. En aquest repositori, però, s'inclouen totes les subrutines que hem hagut de fer seguint el guió de pràctica (també disponible aquí). Per a una millor comprensió de la pràctica i explicació de cada rutina, recomano una lectura dels arxius **guio.pdf** i **memoria.pdf**.
 
-No installations is required. To run the program, just:
-```
-python SolarSystem.py
-```
+Alguns dels mètodes més coneguts del Càlcul Numèric que es cobreixen en aquesta pràctica són el mètode de Runge-Kutta d'ordres 7 i 8 per la resolució de les ODE's, el mètode QR per la resolució de sistemes lineals sobredeterminats i el mètode de Newton per la resolució d'equacions de _n_ variables.
 
-## Usage
+## Instruccions de compilació
+> - Per compilar-ho tot: "make"
+> - Per a esborrar object files: "make cleanobjects"
+> - Per esborrar-ho tot (objectes i executables): "make cleanall"
 
-SolarSystem shows planets orbiting around the Sun considering only effects of gravity. Masses and distances are real, but radius of planets are widely exagerated, in order you can see them. It considers gravity caused by every single planet, but not other forces. Planets are considered to have no inclination with respect to the Ecliptic, and the direction of the apogeum (with respect to the Earth apogeum) is choosen randomly.
+## Estructura del codi
+> - **img/**	- Conté totes les imatges que s'han fet (amb gnuplot) per a la memòria
+> - **io/**	- Conté tots els arxius que han servit com a input i output dels programes
+> - **lib/**	- Conté totes les llibreries creades
+>    *		**bin/**	- Conté els object files (si no s'esborren)
+>    *		**hdr/**	- Conté els headers
+>    *   **src/**	- Conté els codis
+> - **util/**	- Conté les utilitats creades
+>    *   **bin/**	- Conté els executables (si no s'esborren)
+>    *   **src/**	- Conté els codis
 
-> - You can rotate image with CTRL + MOUSE and make zoom with ALT + MOUSE.
-> - In the options, you can choose to see real radius of planets, to show/hide planet trails and what planets you want to be in you model.
-> - **Time Speed**. Use this option for making everything to move slower/faster.
-> - **Move Planets**. After clicking this button, click and drag any planet to move it to another position. Speed won't change. When you are done moving planets, click again the button (now with the name **Stop**).
-> - **New Ship**. When you click this button, a spacial ship (in green) is created in the Earth surface. Click and drag in the screen to generate an arrow which is going to be the impulse communicated to the ship. You can make as many impulses as you want. When you're done, click **Stop** button.
-> - **Add new planet**. Choose the mass, the radius and the virtual radius (the radius to show if _Real radius_ option in disabled) of your planet and click the button **Create a planet**. Click and drag in the screen to launch your planet; initial position will be the point you first click, and velocity will be proportional to the arrow dragged.
-
-
-_This software was developed by Martin Campos for the usage in simulations for UPhysicsC in collaboration with Pere Barber Llorenç and Daniel Romero Madueño._
+_Desenvolupat per Martín Campos per l'assignatura de 'Càlcul Numèric' del grau de Matemàtiques de la Universitat Autònoma de Barcelona_
